@@ -1,0 +1,315 @@
+.about {
+    padding: var(--section-padding);
+    background: rgba(var(--second-bg-color-rgb), 0.8);
+}
+
+.aboutContent {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    margin-top: 3rem;
+}
+
+.aboutImage {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.imageWrapper {
+    position: relative;
+    width: 350px;
+    height: 350px;
+}
+
+.imageWrapper img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0 10px 40px var(--shadow-color);
+    transition: var(--transition);
+}
+
+.imageWrapper:hover img {
+    transform: scale(1.05);
+}
+
+.decorationCircle {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 100px;
+    height: 100px;
+    border: 3px solid var(--primary-color);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.aboutInfo h3 {
+    font-size: var(--h3-size);
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.aboutText p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+.skillsHighlights {
+    list-style: none;
+    margin: 1.5rem 0;
+}
+
+.skillsHighlights li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    font-size: 1rem;
+}
+
+.skillsHighlights li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.personalInfo {
+    margin: 2rem 0;
+}
+
+.infoGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.infoItem {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--bg-color);
+    border-radius: 10px;
+    transition: var(--transition);
+}
+
+.infoItem:hover {
+    transform: translateX(10px);
+    box-shadow: 0 5px 15px var(--shadow-color);
+}
+
+.infoItem i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    min-width: 30px;
+}
+
+.infoLabel {
+    font-weight: 600;
+    margin-right: 0.5rem;
+    color: var(--primary-color);
+}
+
+.infoValue {
+    color: var(--text-color);
+    font-size: 0.95rem;
+}
+
+.actionButtons {
+    display: flex;
+    gap: 1.5rem;
+    margin: 2.5rem 0;
+}
+
+.actionButtons .btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.resumeActions {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.tabsSection {
+    margin-top: 3rem;
+}
+
+.tabsHeader {
+    display: flex;
+    gap: 1rem;
+    border-bottom: 2px solid var(--bg-color);
+    margin-bottom: 2rem;
+}
+
+.tabBtn {
+    padding: 1rem 2rem;
+    background: transparent;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    transition: var(--transition);
+}
+
+.tabBtn::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.tabBtn.active {
+    color: var(--primary-color);
+    transform: scale(1.2);
+    font-weight: 700;
+}
+
+.tabPanel {
+    animation: fadeIn 0.5s ease;
+}
+
+.educationCards {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.educationCard {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background: var(--bg-color);
+    border-radius: 15px;
+    border-left: 4px solid var(--primary-color);
+    transition: var(--transition);
+}
+
+.educationCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px var(--shadow-color);
+}
+
+.educationLogo {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--second-bg-color);
+    border-radius: 10px;
+    font-size: 2rem;
+    color: var(--primary-color);
+    flex-shrink: 0;
+}
+
+.educationLogo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.educationContent h3,
+.educationInfo h4 {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.grade,
+.educationGrade {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    background: var(--primary-color);
+    color: var(--bg-color);
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 0.5rem 0;
+}
+
+.location,
+.educationLocation {
+    display: block;
+    color: var(--text-color);
+    opacity: 0.8;
+    margin: 0.3rem 0;
+    font-size: 0.95rem;
+}
+
+.duration,
+.educationDuration {
+    display: block;
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    .aboutContent {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .imageWrapper {
+        width: 300px;
+        height: 300px;
+        margin: 0 auto;
+    }
+
+    .infoGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .actionButtons {
+        flex-direction: column;
+    }
+
+    .actionButtons .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .tabsHeader {
+        justify-content: center;
+    }
+
+    .tabBtn {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .imageWrapper {
+        width: 250px;
+        height: 250px;
+    }
+
+    .educationCard {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .educationLogo {
+        margin: 0 auto;
+    }
+}

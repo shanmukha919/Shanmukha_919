@@ -1,0 +1,233 @@
+.achievements {
+  padding: 80px 0;
+  background: rgba(var(--bg-color-rgb), 0.8);
+  position: relative;
+}
+
+.certificatesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 40px;
+  margin-top: 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.achievementCard {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+}
+
+.achievementCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea, #764ba2, #f093fb, #f5576c);
+  background-size: 400% 400%;
+  animation: gradientShift 3s ease infinite;
+}
+
+.achievementCard:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.achievementIcon {
+  width: 80px;
+  height: 80px;
+  margin: 30px auto 20px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: white;
+  box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+.achievementContent {
+  padding: 30px;
+  text-align: center;
+}
+
+.achievementTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #00abf0, #667eea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.achievementDescription {
+  font-size: 1rem;
+  color: #b8c5d1;
+  margin-bottom: 25px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.achievementLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.achievementLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  border: 2px solid transparent;
+}
+
+.achievementLink:hover {
+  background: white;
+  color: #667eea;
+  border-color: #667eea;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.achievementLink::after {
+  content: '📄';
+  font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .achievements {
+    padding: 60px 0;
+  }
+
+  .certificatesGrid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-top: 40px;
+  }
+
+  .achievementCard {
+    margin: 0 20px;
+  }
+
+  .achievementIcon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+    margin: 20px auto 15px;
+  }
+
+  .achievementContent {
+    padding: 20px;
+  }
+
+  .achievementTitle {
+    font-size: 1.5rem;
+  }
+
+  .achievementDescription {
+    font-size: 0.9rem;
+  }
+
+  .achievementLink {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .achievements {
+    padding: 40px 0;
+  }
+
+  .achievementCard {
+    margin: 0 10px;
+  }
+
+  .achievementTitle {
+    font-size: 1.3rem;
+  }
+
+  .achievementDescription {
+    font-size: 0.85rem;
+  }
+}
+
+.allCertificatesContainer {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.fullCertificate {
+  padding: 10px;
+}
+
+.fullCertificate h4 {
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #00abf0, #667eea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(0, 171, 240, 0.5);
+}
+
+.certificatesGridAll {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+  justify-content: end;
+}
+
+.certificatesGridAll iframe {
+  border: 0 !important;
+  outline: none !important;
+  border-radius: 0;
+  box-shadow: none;
+  /* Hide PDF viewer toolbar */
+  pointer-events: none;
+}
+
+.certificatesGridAll iframe::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .certificatesGridAll {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

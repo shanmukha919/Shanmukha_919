@@ -1,0 +1,22 @@
+{
+  "name": "portfolio-website",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "gh-pages -d docs"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.1.1",
+    "gh-pages": "^6.3.0",
+    "vite": "^7.2.4"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  }
+}

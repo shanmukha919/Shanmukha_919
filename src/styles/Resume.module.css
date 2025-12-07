@@ -1,0 +1,23 @@
+.resume {
+    padding: 80px 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.resume .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.resumeActions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.emoji {
+    margin-right: 8px;
+}

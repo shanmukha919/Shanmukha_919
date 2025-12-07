@@ -1,0 +1,56 @@
+.heroParticles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.heroParticle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: heroFloat linear infinite;
+    box-shadow: 0 0 10px currentColor;
+}
+
+.heroParticle:nth-child(2n) {
+    animation-direction: reverse;
+}
+
+.heroParticle:nth-child(3n) {
+    border-radius: 0;
+    transform: rotate(45deg);
+}
+
+.heroParticle:nth-child(4n) {
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.heroParticle:nth-child(5n) {
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+@keyframes heroFloat {
+    0% {
+        transform: translateY(100vh) translateX(0px) rotate(0deg) scale(1);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.8;
+    }
+    50% {
+        transform: translateY(50vh) translateX(20px) rotate(180deg) scale(1.2);
+        opacity: 0.6;
+    }
+    90% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(-10vh) translateX(-20px) rotate(360deg) scale(0.8);
+        opacity: 0;
+    }
+}
