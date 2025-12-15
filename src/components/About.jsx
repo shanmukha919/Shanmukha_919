@@ -5,18 +5,18 @@ import tvsLogo from "../assets/images/tvs.jpeg";
 import kluLogo from "../assets/images/klu.jpeg";
 import nttfLogo from "../assets/images/nttf.jpeg";
 import rbpsLogo from "../assets/images/rbps.gif";
+import resumePdf from "../assets/resume.pdf";
+import experienceCertificate from "../assets/images/experience-certificate.jpg";
 import Particles from "./Particles";
 
 function About() {
-    const [activeTab, setActiveTab] = useState("experience");
-
     const viewResume = () => {
-        window.open(`${import.meta.env.BASE_URL}resume.pdf`, "_blank");
+        window.open(resumePdf, "_blank");
     };
 
     const downloadResume = () => {
         const link = document.createElement("a");
-        link.href = `${import.meta.env.BASE_URL}resume.pdf`;
+        link.href = resumePdf;
         link.download = "Shanmukha_Potturi_Resume.pdf";
         document.body.appendChild(link);
         link.click();
@@ -24,7 +24,7 @@ function About() {
     };
 
     const viewExperiences = () => {
-        window.open(`${import.meta.env.BASE_URL}experience-certificate.jpg`, "_blank");
+        window.open(experienceCertificate, "_blank");
     };
 
     return (

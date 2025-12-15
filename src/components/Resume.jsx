@@ -1,4 +1,6 @@
 import styles from "../styles/Resume.module.css";
+import resumePdf from "../assets/resume.pdf";
+import experienceCertificate from "../assets/images/experience-certificate.jpg";
 import Particles from "./Particles";
 
 function Resume() {
@@ -110,7 +112,7 @@ function Resume() {
                                                 <li key={descIndex}>{desc}</li>
                                             ))}
                                         </ul>
-                                        <a href={`${import.meta.env.BASE_URL}experience-certificate.jpg`} className="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                                        <a href={experienceCertificate} className="btn btn-secondary" target="_blank" rel="noopener noreferrer">
                                             <i className="fas fa-eye"></i> View Experience
                                         </a>
                                     </div>
@@ -123,7 +125,7 @@ function Resume() {
                 {/* Download Resume Button */}
                 <div className={styles.resumeDownload}>
                     <a
-                        href={`${import.meta.env.BASE_URL}resume.pdf`}
+                        href={resumePdf}
                         className="btn btn-secondary"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -131,7 +133,7 @@ function Resume() {
                         <i className="fas fa-eye"></i> View Resume
                     </a>
                     <a
-                        href={`${import.meta.env.BASE_URL}resume.pdf`}
+                        href={resumePdf}
                         className="btn btn-primary"
                         download
                         target="_blank"
@@ -141,7 +143,7 @@ function Resume() {
                     </a>
                 </div>
             </div>
-        </section>
+        </section >
     );
 }
 
