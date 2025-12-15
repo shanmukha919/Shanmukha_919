@@ -10,6 +10,8 @@ import experienceCertificate from "../assets/images/experience-certificate.jpg";
 import Particles from "./Particles";
 
 function About() {
+    const [activeTab, setActiveTab] = useState("experience");
+
     const viewResume = () => {
         window.open(resumePdf, "_blank");
     };
