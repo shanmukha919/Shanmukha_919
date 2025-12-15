@@ -11,21 +11,21 @@ function About() {
     const [activeTab, setActiveTab] = useState("experience");
 
     const viewResume = () => {
-        window.open("/resume.pdf", "_blank");
+        window.open(`${import.meta.env.BASE_URL}resume.pdf`, "_blank");
     };
 
     const downloadResume = () => {
         const link = document.createElement("a");
-        link.href = "/resume.pdf";
+        link.href = `${import.meta.env.BASE_URL}resume.pdf`;
         link.download = "Shanmukha_Potturi_Resume.pdf";
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
     };
 
-const viewExperiences = () => {
-    window.open("/experience-certificate.jpg", "_blank");
-};
+    const viewExperiences = () => {
+        window.open(`${import.meta.env.BASE_URL}experience-certificate.jpg`, "_blank");
+    };
 
     return (
         <section className={styles.about} id="about">
@@ -36,7 +36,7 @@ const viewExperiences = () => {
                 </h2>
 
                 <div className={styles.aboutContent}>
-                    
+
                     {/* LEFT IMAGE */}
                     <div className={styles.aboutImage}>
                         <div className={styles.imageWrapper}>
@@ -51,7 +51,7 @@ const viewExperiences = () => {
 
                         <div className={styles.aboutText}>
                             <p>
-                               🚀 My professional journey started at TVS Brakes India, where I developed a strong foundation in the manufacturing and development of braking systems for vehicles. Over 3 years — 1 year as a Trainee followed by 2 years as a Junior Technical Trainee — I gained hands-on technical experience and built a deep understanding of automotive production processes. 🔧
+                                🚀 My professional journey started at TVS Brakes India, where I developed a strong foundation in the manufacturing and development of braking systems for vehicles. Over 3 years — 1 year as a Trainee followed by 2 years as a Junior Technical Trainee — I gained hands-on technical experience and built a deep understanding of automotive production processes. 🔧
                             </p>
 
                             <ul className={styles.skillsHighlights}>
