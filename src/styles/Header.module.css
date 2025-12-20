@@ -119,7 +119,7 @@
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     .menuToggle {
         display: flex;
     }
@@ -150,7 +150,7 @@
 
 @media (max-width: 480px) {
     .logo {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     .navbar {

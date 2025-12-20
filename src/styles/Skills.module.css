@@ -1,10 +1,13 @@
 .skills {
     padding: var(--section-padding);
     background: rgba(var(--bg-color-rgb), 0.8);
+    position: relative;
+    overflow: hidden;
 }
 
 .skillsGrid {
     display: flex;
+    width: 100%;
     overflow-x: auto;
     gap: 2.5rem;
     margin-top: 0;
@@ -109,12 +112,19 @@
     margin-bottom: 3rem;
     text-align: center;
     font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 @keyframes colorShift {
-    0%, 100% { filter: hue-rotate(0deg); }
-    50% { filter: hue-rotate(30deg); }
+
+    0%,
+    100% {
+        filter: hue-rotate(0deg);
+    }
+
+    50% {
+        filter: hue-rotate(30deg);
+    }
 }
 
 .activityGrid {
@@ -184,4 +194,3 @@
     background: #0088cc;
     transform: translateY(-3px);
 }
-
