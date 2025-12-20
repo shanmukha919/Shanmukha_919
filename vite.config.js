@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/Shannu-919_Lakshmi/',
+  base: '/Shanmukha_919/',
   build: {
     outDir: 'docs'
   }
