@@ -25,27 +25,30 @@ function Contact() {
         setStatus('');
 
         try {
-            // Create email content
-            const emailSubject = encodeURIComponent(`Portfolio Contact: ${formData.subject || 'New Message'}`);
-            const emailBody = encodeURIComponent(`
-Name: ${formData.name}
-Email: ${formData.email}
-Subject: ${formData.subject}
+            const response = await fetch("https://formsubmit.co/ajax/potturishanmukha919@gmail.com", {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    name: formData.name,
+                    email: formData.email,
+                    subject: formData.subject || "Portfolio Contact Form",
+                    message: formData.message
+                })
+            });
 
-Message:
-${formData.message}
+            if (response.ok) {
+                // Show success message
+                setStatus('success');
+                setFormData({ name: '', email: '', subject: '', message: '' });
 
----
-Sent from Portfolio Website Contact Form
-            `);
-
-            // Open default email client with pre-filled content
-            const mailtoLink = `mailto:potturishanmukha919@gmail.com?subject=${emailSubject}&body=${emailBody}`;
-            window.open(mailtoLink, '_blank');
-
-            // Show success message
-            setStatus('success');
-            setFormData({ name: '', email: '', subject: '', message: '' });
+                // Clear success message after 5 seconds
+                setTimeout(() => setStatus(''), 5000);
+            } else {
+                throw new Error('Form submission failed');
+            }
 
         } catch (error) {
             console.error('Form submission error:', error);
@@ -71,7 +74,11 @@ Sent from Portfolio Website Contact Form
                                 <i className="fas fa-envelope"></i>
                                 <div>
                                     <h4>Email</h4>
-                                    <p>potturishanmukha919@gmail.com</p>
+                                    <p>
+                                        <a href="mailto:potturishanmukha919@gmail.com" style={{ color: 'var(--text-color)', textDecoration: 'none' }}>
+                                            potturishanmukha919@gmail.com
+                                        </a>
+                                    </p>
                                 </div>
                             </div>
                             <div className={styles.contactItem}>
