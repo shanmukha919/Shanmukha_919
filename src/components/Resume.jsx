@@ -1,5 +1,5 @@
 import styles from "../styles/Resume.module.css";
-import resumePdf from "../assets/resume.pdf";
+import resumePdf from "../assets/images/Shanmukha Main111.pdf";
 import experienceCertificate from "../assets/images/experience-certificate.jpg";
 import Particles from "./Particles";
 
