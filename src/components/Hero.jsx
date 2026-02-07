@@ -1,20 +1,20 @@
 import { useEffect, useRef } from 'react'
 import styles from '../styles/Hero.module.css'
-import profileImage from '../assets/images/Shanmukha.jpg'
+import profileImage from '../assets/images/Shanmukhaaaa.png'
 
 function Hero() {
     const roleRef = useRef(null)
 
     useEffect(() => {
         // Simple typing animation with colored roles
-     const roles = [
-  { text: "💻 Frontend & Backend Developer", color: "#00d4ff" },
-  { text: "🛡️ Cyber Security Enthusiast", color: "#ff4757" },
-  { text: "🧑‍💻 Full Stack Developer", color: "#3742fa" },
-  { text: "🔧 DevOps Enthusiast", color: "#2ed573" },
-  { text: "🧠 Problem Solver", color: "#ff6b9d" }
-];
-    let roleIndex = 0
+        const roles = [
+            { text: "💻 Frontend & Backend Developer", color: "#00d4ff" },
+            { text: "🛡️ Cyber Security Enthusiast", color: "#ff4757" },
+            { text: "🧑‍💻 Full Stack Developer", color: "#3742fa" },
+            { text: "🔧 DevOps Enthusiast", color: "#2ed573" },
+            { text: "🧠 Problem Solver", color: "#ff6b9d" }
+        ];
+        let roleIndex = 0
         let charIndex = 0
         let isDeleting = false
         let typingSpeed = 150
@@ -94,13 +94,13 @@ function Hero() {
 
                     </div>
 
-                        <div className={styles.heroImage}>
-                            <div className={styles.imageContainer}>
-                                <img
-                                    src={profileImage}
-                                    alt="Shanmukha Potturi"
-                                    className={styles.profileImage}
-                                />
+                    <div className={styles.heroImage}>
+                        <div className={styles.imageContainer}>
+                            <img
+                                src={profileImage}
+                                alt="Shanmukha Potturi"
+                                className={styles.profileImage}
+                            />
                             <div className={styles.floatingElements}>
                                 <div className={`${styles.floatingElement} ${styles.element1}`}></div>
                                 <div className={`${styles.floatingElement} ${styles.element2}`}></div>
