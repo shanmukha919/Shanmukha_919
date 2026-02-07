@@ -183,7 +183,7 @@ function About() {
 
                                                 <div className={styles.educationInfo}>
                                                     <h4>KL University</h4>
-                                                    <div className={styles.educationGrade}>9.14 CGPA</div>
+                                                    <div className={styles.educationGrade}>9.16 CGPA</div>
                                                     <p className={styles.educationLocation}>Vijayawada, AP</p>
                                                     <p className={styles.educationDuration}>2024 - 2027</p>
                                                 </div>
