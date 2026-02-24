@@ -53,7 +53,9 @@ function About() {
 
                         <div className={styles.aboutText}>
                             <p>
-                                🚀 My professional journey started at TVS Brakes India, where I developed a strong foundation in the manufacturing and development of braking systems for vehicles. Over 3 years — 1 year as a Trainee followed by 2 years as a Junior Technical Trainee — I gained hands-on technical experience and built a deep understanding of automotive production processes. 🔧
+                                I’m a Full Stack Developer with 3 years of industry experience at TVS Brakes India, where I worked as a Trainee and Junior Technical Trainee. That experience helped me build strong problem-solving skills and a solid technical foundation.
+
+Now, I focus on developing responsive and scalable web applications using modern frontend and backend technologies. I’m passionate about continuous learning and building solutions that solve real-world problems.
                             </p>
 
                             <ul className={styles.skillsHighlights}>
