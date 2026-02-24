@@ -12,7 +12,7 @@ function Header({ theme, toggleTheme }) {
             setIsScrolled(window.scrollY > 50)
 
             // Update active section
-            const sections = ['home', 'about', 'skills', 'projects','achievements', 'contact']
+            const sections = ['home', 'about', 'skills', 'projects', 'achievements', 'contact']
             const current = sections.find(section => {
                 const element = document.getElementById(section)
                 if (element) {
@@ -102,7 +102,7 @@ function Header({ theme, toggleTheme }) {
                         >
                             Contact
                         </a>
-                        
+
                     </nav>
 
                     <div className={styles.themeToggle} onClick={toggleTheme}>

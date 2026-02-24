@@ -4,6 +4,10 @@ import Particles from './Particles'
 function Achievements() {
     const images = [
         {
+            name: 'Microsoft Certified: Azure Fundamentals (AZ-900)',
+            src: `${import.meta.env.BASE_URL}docs/assets/Azure-900.pdf#toolbar=0`
+        },
+        {
             name: 'Coursera Certificate 1',
             src: `${import.meta.env.BASE_URL}docs/assets/Coursera 0S7L839S2MZ1.pdf#toolbar=0`
         },
@@ -38,7 +42,7 @@ function Achievements() {
     ];
 
     return (
-        <section className={styles.achievements} id="Achievements">
+        <section className={styles.achievements} id="achievements">
             <Particles />
             <div className="container">
                 <h2 className="section-title">My <span>Achievements</span></h2>
@@ -48,7 +52,13 @@ function Achievements() {
                         {images.map((image, index) => (
                             <div key={index} className={styles.fullCertificate}>
                                 <h4>{image.name}</h4>
-                                <object data={image.src} type="application/pdf" style={{width: '100%', height: '200px', borderRadius: '10px', border: 'none'}} title={image.name}></object>
+                                <div className={styles.certificateWrapper}>
+                                    <iframe
+                                        src={image.src}
+                                        title={image.name}
+                                        className={styles.certificateFrame}
+                                    ></iframe>
+                                </div>
                             </div>
                         ))}
                     </div>
