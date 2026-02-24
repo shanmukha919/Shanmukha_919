@@ -279,22 +279,28 @@
 }
 
 @media (max-width: 768px) {
-    .actionButtons {
+
+    .actionButtons,
+    .resumeActions {
         flex-direction: column;
+        gap: 1rem;
     }
 
-    .actionButtons .btn {
+    .actionButtons .btn,
+    .resumeActions .btn {
         width: 100%;
         justify-content: center;
     }
 
     .tabsHeader {
         justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.5rem;
     }
 
     .tabBtn {
-        padding: 0.8rem 1.5rem;
-        font-size: 1rem;
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
     }
 }
 
