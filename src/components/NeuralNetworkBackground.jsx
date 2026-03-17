@@ -69,7 +69,7 @@ function NeuralNetworkBackground() {
                 this.y = Math.random() * (cHeight + margin * 2) - margin;
                 this.vx = (Math.random() - 0.5) * config.speed;
                 this.vy = (Math.random() - 0.5) * config.speed;
-                this.radius = Math.random() * 5 + 4; // Massive dots
+                this.radius = Math.random() * 2 + 1; // Standard dots
                 this.depth = Math.random() * 0.8 + 0.5; // Stronger parallax
             }
 
@@ -124,7 +124,7 @@ function NeuralNetworkBackground() {
                         const opacity = 1 - (distance / config.maxDistance);
                         ctx.beginPath();
                         ctx.strokeStyle = `${config.lineColor}${opacity * 0.9})`;
-                        ctx.lineWidth = 3.5; // Extra thick lines
+                        ctx.lineWidth = 1; // Standard thin lines
                         ctx.moveTo(posI.x, posI.y);
                         ctx.lineTo(posJ.x, posJ.y);
                         ctx.stroke();
@@ -139,7 +139,7 @@ function NeuralNetworkBackground() {
                         const opacity = 1 - (distance / mouse.radius);
                         ctx.beginPath();
                         ctx.strokeStyle = `${config.lineColor}${opacity})`;
-                        ctx.lineWidth = 5.5; // Extra thick lines connected to mouse
+                        ctx.lineWidth = 1; // Standard thin lines connected to mouse
                         ctx.moveTo(posI.x, posI.y);
                         ctx.lineTo(mouse.x, mouse.y);
                         ctx.stroke();
