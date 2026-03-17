@@ -1,7 +1,7 @@
 import styles from "../styles/Resume.module.css";
 import resumePdf from "../assets/images/Shanmukha Main111.pdf";
 import experienceCertificate from "../assets/images/experience-certificate.jpg";
-import Particles from "./Particles";
+
 
 function Resume() {
     const education = [
@@ -55,7 +55,7 @@ function Resume() {
 
     return (
         <section className={styles.resume} id="resume">
-            <Particles />
+
             <div className="container">
                 <h2 className="section-title">My <span>Resume</span></h2>
 

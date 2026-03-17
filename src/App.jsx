@@ -9,7 +9,7 @@ import Contact from './components/Contact'
 import Footer from './components/Footer'
 import Loader from './components/Loader'
 import BackToTop from './components/BackToTop'
-import HeroParticles from './components/HeroParticles'
+import NeuralNetworkBackground from './components/NeuralNetworkBackground'
 
 import './App.css'
 
@@ -44,7 +44,7 @@ function App() {
 
     return (
         <div className="app">
-            <HeroParticles />
+            <NeuralNetworkBackground />
             <Header theme={theme} toggleTheme={toggleTheme} />
             <main>
                 <Hero />

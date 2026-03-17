@@ -1,0 +1,13 @@
+.canvasBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    /* Allows user to click through the canvas to links/buttons */
+    z-index: -1;
+    background: var(--bg-color);
+    /* Matches theme and avoids hardcoded dark colors */
+    transition: background 0.3s ease;
+}

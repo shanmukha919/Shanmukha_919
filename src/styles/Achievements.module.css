@@ -1,6 +1,6 @@
 .achievements {
   padding: 80px 0;
-  background: rgba(var(--bg-color-rgb), 0.8);
+  background: rgba(var(--bg-color-rgb), 0.4);
   position: relative;
 }
 

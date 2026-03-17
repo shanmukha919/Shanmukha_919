@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import styles from '../styles/Contact.module.css'
-import Particles from './Particles'
+
 
 function Contact() {
     const [formData, setFormData] = useState({
@@ -60,7 +60,7 @@ function Contact() {
 
     return (
         <section className={styles.contact} id="contact">
-            <Particles />
+
             <div className="container">
                 <h2 className="section-title">Contact <span>Me</span></h2>
 

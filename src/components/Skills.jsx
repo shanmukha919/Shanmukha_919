@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import styles from '../styles/Skills.module.css'
-import Particles from './Particles'
+
 
 function Skills() {
     const scrollRef = useRef(null)
@@ -37,7 +37,7 @@ function Skills() {
 
     return (
         <section className={styles.skills} id="skills">
-            <Particles />
+
             <div className="container">
                 <h2 className="section-title">My <span>Skillset</span></h2>
 

@@ -7,7 +7,7 @@ import nttfLogo from "../assets/images/nttf.jpeg";
 import rbpsLogo from "../assets/images/rbps.gif";
 import resumePdf from "../assets/images/Shanmukha Main111.pdf";
 import experienceCertificate from "../assets/images/experience-certificate.jpg";
-import Particles from "./Particles";
+
 
 function About() {
     const [activeTab, setActiveTab] = useState("experience");
@@ -31,7 +31,7 @@ function About() {
 
     return (
         <section className={styles.about} id="about">
-            <Particles />
+
             <div className="container">
                 <h2 className="section-title">
                     About <span>Me</span>
@@ -53,9 +53,9 @@ function About() {
 
                         <div className={styles.aboutText}>
                             <p>
-                               I’m a Full Stack Developer with a strong technical background. My professional journey began at TVS Brakes India, where I worked for 3 years in the Development Department — 1 year as a Trainee and 2 years as a Junior Technical Trainee. During this time, I gained hands-on experience in the manufacturing and development of automotive braking systems, building strong analytical thinking and problem-solving skills.
+                                I’m a Full Stack Developer with a strong technical background. My professional journey began at TVS Brakes India, where I worked for 3 years in the Development Department — 1 year as a Trainee and 2 years as a Junior Technical Trainee. During this time, I gained hands-on experience in the manufacturing and development of automotive braking systems, building strong analytical thinking and problem-solving skills.
 
-With this foundation, I transitioned into web development. I now focus on frontend and backend technologies, building responsive and scalable web applications. I’m passionate about continuous learning and creating solutions that solve real-world problems.
+                                With this foundation, I transitioned into web development. I now focus on frontend and backend technologies, building responsive and scalable web applications. I’m passionate about continuous learning and creating solutions that solve real-world problems.
                             </p>
 
                             <ul className={styles.skillsHighlights}>

@@ -1,5 +1,5 @@
 import styles from '../styles/Achievements.module.css'
-import Particles from './Particles'
+
 
 function Achievements() {
     const images = [
@@ -43,7 +43,7 @@ function Achievements() {
 
     return (
         <section className={styles.achievements} id="achievements">
-            <Particles />
+
             <div className="container">
                 <h2 className="section-title">My <span>Achievements</span></h2>
 

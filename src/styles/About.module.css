@@ -1,6 +1,6 @@
 .about {
     padding: var(--section-padding);
-    background: rgba(var(--second-bg-color-rgb), 0.8);
+    background: rgba(var(--second-bg-color-rgb), 0.4);
 }
 
 .aboutContent {

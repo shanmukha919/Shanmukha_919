@@ -1,5 +1,5 @@
 import styles from '../styles/Projects.module.css'
-import Particles from './Particles'
+
 
 function Projects() {
     const projects = [
@@ -18,7 +18,7 @@ function Projects() {
             tags: ['React.js', 'Node.js', 'MongoDB', 'REST API'],
             liveLink: '#',
             codeLink: '#'
-    },
+        },
         {
             title: 'E-Commerce Platform',
             description: 'Full-featured online store with payment integration and admin dashboard.',
@@ -31,7 +31,7 @@ function Projects() {
 
     return (
         <section className={styles.projects} id="projects">
-            <Particles />
+
 
             <div className="container">
                 <h2 className="section-title">
@@ -41,7 +41,7 @@ function Projects() {
                 <div className={styles.projectsGrid}>
                     {projects.map((project, index) => (
                         <div key={index} className={styles.projectCard}>
-                            
+
                             <div className={styles.projectImage}>
                                 <img src={project.image} alt={project.title} />
 
