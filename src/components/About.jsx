@@ -5,7 +5,7 @@ import tvsLogo from "../assets/images/tvs.jpeg";
 import kluLogo from "../assets/images/klu.jpeg";
 import nttfLogo from "../assets/images/nttf.jpeg";
 import rbpsLogo from "../assets/images/rbps.gif";
-import resumePdf from "../assets/images/Shanmukha Main111.pdf";
+import resumePdf from "../assets/images/Potturi Shanmukha Resume.pdf";
 import experienceCertificate from "../assets/images/experience-certificate.jpg";
 
 
