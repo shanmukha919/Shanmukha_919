@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "../styles/About.module.css";
-import shanmukhaImage from "../assets/images/Shanmukha1.jpg";
+import shanmukhaImage from "../assets/images/Shanmukha.JPG";
 import tvsLogo from "../assets/images/tvs.jpeg";
 import kluLogo from "../assets/images/klu.jpeg";
 import nttfLogo from "../assets/images/nttf.jpeg";
@@ -72,7 +72,7 @@ function About() {
                                     <i className="fas fa-user"></i>
                                     <div>
                                         <span className={styles.infoLabel}>Age:</span>
-                                        <span className={styles.infoValue}>22</span>
+                                        <span className={styles.infoValue}>23</span>
                                     </div>
                                 </div>
 
