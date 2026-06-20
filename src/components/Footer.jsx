@@ -11,12 +11,7 @@ function Footer() {
                         <p><span className="copyright-text">&copy; {currentYear}</span> <span className="name-highlight">Shanmukha Potturi</span> <span className="copyright-text">. All rights reserved.</span></p>
                     </div>
 
-                    <div className={styles.footerLinks}>
-                        <a href="#home" className={styles.footerLink}>Home</a>
-                        <a href="#about" className={styles.footerLink}>About</a>
-                        <a href="#projects" className={styles.footerLink}>Projects</a>
-                        <a href="#contact" className={styles.footerLink}>Contact</a>
-                    </div>
+
 
                     <div className={styles.footerSocial}>
                         <a href="https://github.com/shanmukha919" className={styles.socialLink} aria-label="GitHub" target="_blank" rel="noopener noreferrer">
