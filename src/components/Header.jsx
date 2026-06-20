@@ -1,27 +1,14 @@
 import { useState, useEffect } from 'react'
 import styles from '../styles/Header.module.css'
 
-function Header({ theme, toggleTheme }) {
+function Header({ theme, toggleTheme, activeSection }) {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
-    const [activeSection, setActiveSection] = useState('home')
     const [isScrolled, setIsScrolled] = useState(false)
 
     useEffect(() => {
         const handleScroll = () => {
             // Header background on scroll
             setIsScrolled(window.scrollY > 50)
-
-            // Update active section
-            const sections = ['home', 'about', 'skills', 'projects', 'achievements', 'contact']
-            const current = sections.find(section => {
-                const element = document.getElementById(section)
-                if (element) {
-                    const rect = element.getBoundingClientRect()
-                    return rect.top <= 100 && rect.bottom >= 100
-                }
-                return false
-            })
-            if (current) setActiveSection(current)
         }
 
         window.addEventListener('scroll', handleScroll)
@@ -34,11 +21,8 @@ function Header({ theme, toggleTheme }) {
 
     const handleNavClick = (e, sectionId) => {
         e.preventDefault()
-        const element = document.getElementById(sectionId)
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth' })
-            setIsMenuOpen(false)
-        }
+        window.location.hash = `#${sectionId}`
+        setIsMenuOpen(false)
     }
 
     return (

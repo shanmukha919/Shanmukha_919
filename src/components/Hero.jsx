@@ -21,6 +21,7 @@ function Hero() {
 
         const type = () => {
             const currentRole = roles[roleIndex]
+            const roleTextArray = Array.from(currentRole.text)
 
             if (isDeleting) {
                 charIndex--
@@ -31,11 +32,11 @@ function Hero() {
             }
 
             if (roleRef.current) {
-                roleRef.current.textContent = "I Am A " + currentRole.text.substring(0, charIndex)
+                roleRef.current.textContent = "I Am A " + roleTextArray.slice(0, charIndex).join('')
                 roleRef.current.style.color = currentRole.color
             }
 
-            if (!isDeleting && charIndex === currentRole.text.length) {
+            if (!isDeleting && charIndex === roleTextArray.length) {
                 isDeleting = true
                 typingSpeed = 2000
             } else if (isDeleting && charIndex === 0) {

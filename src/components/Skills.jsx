@@ -73,7 +73,7 @@ function Skills() {
                             <h4>GitHub Contributions</h4>
                             <p>Showcasing open-source projects and collaborative coding efforts</p>
                             <div className={styles.heatmap}>
-                                <img src="https://ghchart.rshah.org/shanmukha" alt="GitHub Contribution Heatmap" />
+                                <img src="https://ghchart.rshah.org/shanmukha919" alt="GitHub Contribution Heatmap" />
                             </div>
                             <a href="https://github.com/shanmukha919?tab=repositories" target="_blank" rel="noopener noreferrer" className={styles.profileBtn}>
                                 View GitHub Profile
